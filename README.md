@@ -1,2 +1,5 @@
-# java-visitor-generator
-An annotation processor for generating visitors for class hierarchies
+Visitor Generator (WIP)
+=================
+
+An annotation processor which can generate visitors for class
+hierarchies.

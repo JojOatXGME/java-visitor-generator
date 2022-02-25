@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'project-report'
+}
+
+tasks.jar {
+    manifest {
+        attributes('Automatic-Module-Name': 'dev.johanness.visitor_annotation_processor')
+    }
+}
+
+dependencies {
+    compileOnly 'org.jetbrains:annotations'
+    testCompileOnly 'org.jetbrains:annotations'
+
+    implementation project(':annotations')
+    implementation 'com.google.auto:auto-common'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params'
+    testImplementation 'com.google.testing.compile:compile-testing'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}

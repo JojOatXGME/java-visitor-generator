@@ -1,0 +1,21 @@
+plugins {
+    id 'application'
+    id 'project-report'
+}
+
+application {
+    mainClass = 'dev.johanness.thread_annotations_example.Main'
+}
+
+dependencies {
+    annotationProcessor project(':processor')
+    compileOnly project(':annotations')
+    compileOnly 'org.jetbrains:annotations'
+    testCompileOnly 'org.jetbrains:annotations'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}

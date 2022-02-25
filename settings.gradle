@@ -1,0 +1,5 @@
+rootProject.name = 'java-visitor-generator'
+
+include 'annotations'
+include 'example'
+include 'processor'
